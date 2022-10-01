@@ -113,7 +113,7 @@ public class Atividade {
             System.out.println("Fila ainda está vazia!");
             System.out.println("Inserir novo elemento");
             valorInserir = sc.nextInt();
-            
+            lista.insereNoInicio(valorInserir);
             fimMenuLista(lista);
 
         } else if (parametro == 1) {
@@ -126,7 +126,15 @@ public class Atividade {
             System.out.println("Removendo elemento no inicio da lista!");
             lista.removeNoInicio();
             fimMenuLista(lista);
-        }
+        }else if (parametro == 3){
+            int posicao;
+            System.out.println("Inserir novo elemento:");
+            valorInserir = sc.nextInt();
+            System.out.println("Posição do novo elemento");
+            posicao = sc.nextInt();
+            lista.insereNoMeio(valorInserir,posicao);
+            fimMenuLista(lista);
+        }            
     }
 
     private static void fimMenuLista(Lista lista) throws EmptyListException {
@@ -139,6 +147,10 @@ public class Atividade {
 
         System.out.println("1 - Inserir novo elemento no inicio da lista");
         System.out.println("2 - Remover elemento no inicio da lista");
+        System.out.println("3 - Insere no meio");
+        System.out.println("4 - Remove no meio");
+        System.out.println("5 - Insere no fim");
+        System.out.println("6 - Remove no fim");
         System.out.println("0 - Sair");
 
         int menu = sc.nextInt();
@@ -148,6 +160,18 @@ public class Atividade {
                 break;
             case 2:
                 interacaoLista(2, lista);//remove no inicio
+                break;
+            case 3:
+                interacaoLista(3, lista);
+                break;
+            case 4:
+                interacaoLista(4, lista);
+                break;
+            case 5:
+                interacaoLista(5, lista);
+                break;
+            case 6:
+                interacaoLista(6, lista);
                 break;
             case 0:
                 break;
