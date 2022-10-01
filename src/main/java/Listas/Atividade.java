@@ -134,7 +134,22 @@ public class Atividade {
             posicao = sc.nextInt();
             lista.insereNoMeio(valorInserir,posicao);
             fimMenuLista(lista);
-        }            
+        }else if (parametro == 4){
+            int posicao;
+            System.out.println("Posição do elemento que deseja remover");
+            posicao = sc.nextInt();
+            lista.removeFromPosicao(posicao);
+            fimMenuLista(lista);
+        }else if (parametro == 5){
+            System.out.println("Inserir novo elemento:");
+            valorInserir = sc.nextInt();
+            lista.insereNoFim(valorInserir);
+            fimMenuLista(lista);
+        }else if (parametro == 6){
+            System.out.println("Removendo elemento no fim da lista!");
+            lista.removeNoFim();
+            fimMenuLista(lista);
+        }         
     }
 
     private static void fimMenuLista(Lista lista) throws EmptyListException {
@@ -147,10 +162,10 @@ public class Atividade {
 
         System.out.println("1 - Inserir novo elemento no inicio da lista");
         System.out.println("2 - Remover elemento no inicio da lista");
-        System.out.println("3 - Insere no meio");
-        System.out.println("4 - Remove no meio");
-        System.out.println("5 - Insere no fim");
-        System.out.println("6 - Remove no fim");
+        System.out.println("3 - Insere no meio da lista");
+        System.out.println("4 - Remove no meio da lista");
+        System.out.println("5 - Insere no fim da lista");
+        System.out.println("6 - Remove no fim da lista");
         System.out.println("0 - Sair");
 
         int menu = sc.nextInt();
