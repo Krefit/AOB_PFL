@@ -123,8 +123,8 @@ public class Atividade {
             fimMenuLista(lista);
 
         } else if (parametro == 2) {
-            System.out.println("Desenfilerando fila!");
-            
+            System.out.println("Removendo elemento no inicio da lista!");
+            lista.removeNoInicio();
             fimMenuLista(lista);
         }
     }
@@ -138,16 +138,16 @@ public class Atividade {
         lista.print();
 
         System.out.println("1 - Inserir novo elemento no inicio da lista");
-        System.out.println("2 - Remover elemento da fila");
+        System.out.println("2 - Remover elemento no inicio da lista");
         System.out.println("0 - Sair");
 
         int menu = sc.nextInt();
         switch (menu) {
             case 1:
-                interacaoLista(1, lista);
+                interacaoLista(1, lista);//inserir no inicio
                 break;
             case 2:
-                interacaoLista(2, lista);
+                interacaoLista(2, lista);//remove no inicio
                 break;
             case 0:
                 break;
